@@ -1,7 +1,7 @@
 const $noteTitle = $(".note-title");
 const $noteText = $(".note-textarea");
-const $saveNoteBtn = $(".save-note");
-const $newNoteBtn = $(".new-note");
+const $saveNoteBtn = $("#save-note");
+const $newNoteBtn = $("#new-note");
 const $noteList = $(".list-container .list-group");
 
 // activeNote is used to keep track of the note in the textarea
@@ -56,6 +56,8 @@ const handleNoteSave = function () {
     text: $noteText.val(),
   };
 
+  console.log(newNote);
+
   saveNote(newNote).then(() => {
     getAndRenderNotes();
     renderActiveNote();
@@ -68,11 +70,11 @@ const handleNoteDelete = function (event) {
   event.stopPropagation();
 
   const note = $(this).parent(".list-group-item").data();
-
+  console.log(note);
   if (activeNote.id === note.id) {
     activeNote = {};
   }
-
+  console.log(activeNote);
   deleteNote(note.id).then(() => {
     getAndRenderNotes();
     renderActiveNote();
