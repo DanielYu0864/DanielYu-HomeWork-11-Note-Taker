@@ -1,4 +1,12 @@
 [
-    {"title":"Test Title",
-    "text":"Test text"}
+    {
+        "objectId": "1",
+        "title":"Test Title",
+        "text":"Test text"
+    },
+    {
+        "objectId": "2",
+        "title":"Test Title",
+        "text":"Test text"
+        }
 ]

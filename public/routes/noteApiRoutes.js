@@ -11,5 +11,26 @@ module.exports = function(app) {
         res.json(req.body);
     });
 
+    app.delete("/api/notes/:id", function(req, res) {
+        const noteId = req.params.id;
+
+        console.log(noteId);
+
+        for (let i = 0; i < dbData.length; i ++ ) {
+            if (noteId === dbData[i].objectId) {
+
+                dbData.splice(i, 1);
+
+                console.log(dbData);
+
+                return console.log("data has been deleted");
+            }
+        }
+
+        res.json(dbData);
+
+
+    });
+
 
 }
