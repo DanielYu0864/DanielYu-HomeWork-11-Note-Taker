@@ -1,4 +1,6 @@
-const dbData = require("../../db/db.json");
+const dbData = require("../db/db.json");
+const shortid = require("shortid");
+
 
 module.exports = function(app) {
     app.get("/api/notes", function(req, res) {
@@ -6,9 +8,15 @@ module.exports = function(app) {
     });
 
     app.post("/api/notes", function(req, res) {
-        dbData.push(req.body);
 
-        res.json(req.body);
+        const dbInfo = {
+            title : req.body.title,
+            text : req.body.text,
+            id : shortid.generate()
+        }
+        dbData.push(dbInfo);
+
+        res.status(200).json(dbInfo);
     });
 
     app.delete("/api/notes/:id", function(req, res) {
@@ -16,21 +24,18 @@ module.exports = function(app) {
 
         console.log(noteId);
 
+        // const deleted = dbData.find(data => data.ojectId === noteId);
+
         for (let i = 0; i < dbData.length; i ++ ) {
-            if (noteId === dbData[i].objectId) {
+            if (noteId === dbData[i].id) {
 
                 dbData.splice(i, 1);
 
                 console.log(dbData);
 
-                return console.log("data has been deleted");
+                return res.status(200).json(dbData);
             }
         }
-
-
-
-        res.json(dbData);
-
 
     });
 

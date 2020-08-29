@@ -1,11 +1,11 @@
 [
     {
-        "objectId": "1",
+        "id": "1",
         "title":"Test Title",
         "text":"Test text"
     },
     {
-        "objectId": "2",
+        "id": "2",
         "title":"Test Title",
         "text":"Test text"
         }

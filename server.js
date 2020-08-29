@@ -5,9 +5,9 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-require("./public/routes/noteApiRoutes")(app);
-require("./public/routes/htmlRoutes")(app);
+app.use(express.static("public"))
+require("./routes/noteApiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 app.listen(PORT, function() {
     console.log("PORT: " + PORT);
