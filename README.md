@@ -28,6 +28,10 @@
 
 ![delete](./Assets/gif/deletenote.gif)
 
+4. `/api/notes` to get json version of the note
+
+![api](./Assets/gif/api.gif)
+
 ### Language
 ```md
 * HTML
