@@ -24,8 +24,6 @@ module.exports = function(app) {
 
         console.log(noteId);
 
-        // const deleted = dbData.find(data => data.ojectId === noteId);
-
         for (let i = 0; i < dbData.length; i ++ ) {
             if (noteId === dbData[i].id) {
 
