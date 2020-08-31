@@ -10,8 +10,12 @@
 ```
 1. `Home Page`
 
+![Home](./Assets/screen/homepage.png)
 
 2. `Note Taker Page`
+
+![Note](./Assets/screen/notepage.png)
+
 
 ### Usage
 
