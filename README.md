@@ -24,7 +24,7 @@
 
 2. All saved note will display title on the right column
 
-![title](./Assets/gif/looknote.gif)
+![title](./Assets/gif/Looknote.gif)
 
 3. Press `delete` button to delete the notes
 
