@@ -7,6 +7,7 @@
 ```md
 * A sample Note taker application that can help the user write, save, and delete the notes
 * The servers is deployed on Heroku
+* Ever note inculded `Title` and `Text`
 ```
 1. `Home Page`
 
@@ -16,18 +17,18 @@
 
 ![Note](./Assets/screen/notepage.png)
 
-
 ### Usage
+1. Press `save` button to save the notes
 
-1. Ever note inculded `Title` and `Tex`
+![save](./Assets/gif/startandsave.gif)
 
-2. Press `save` button to save the notes
+2. All saved note will display title on the right column
 
-3. All saved note will display title on the right column
+![title](./Assets/gif/looknote.gif)
 
 3. Press `delete` button to delete the notes
 
-
+![delete](./Assets/gif/deletenote.gif)
 
 ### Language
 ```md
